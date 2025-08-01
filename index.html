@@ -5,34 +5,48 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>My Food Shop</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<style>
+    body.menu-open {
+      overflow: hidden;
+    }
+    #mobileOverlay {
+      transition: background-color 0.3s ease;
+    }
+    #mobileDrawer {
+      transition: transform 0.3s ease;
+      transform: translateX(100%);
+    }
+    #mobileOverlay.active #mobileDrawer {
+      transform: translateX(0);
+    }
+  </style>
 </head>
 <body class="bg-white text-gray-800 font-sans">
 
 <!-- Header -->
 <header class="bg-red-500 text-white shadow-md sticky top-0 z-50">
-  <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+  <div class="container mx-auto px-4 py-4 flex items-center justify-between">
     <h1 class="text-2xl font-bold">My Food Shop</h1>
-
-    <!-- Hamburger Button -->
-    <button id="menuBtn" class="md:hidden text-white text-3xl focus:outline-none z-50 relative">
+    <nav class="hidden md:flex space-x-6">
+      <a href="#locations" class="hover:underline">Locations</a>
+      <a href="#photos" class="hover:underline">Photos</a>
+      <a href="#menu" class="hover:underline">Menu</a>
+      <a href="#contact" class="hover:underline">Contact</a>
+    </nav>
+    <button id="menuBtn" class="md:hidden text-white text-3xl focus:outline-none z-50">
       ☰
     </button>
   </div>
-
-  <!-- Desktop Nav -->
-  <nav class="hidden md:flex justify-center space-x-6 py-2">
-    <a href="#locations" class="hover:underline">Locations</a>
-    <a href="#photos" class="hover:underline">Photos</a>
-    <a href="#menu" class="hover:underline">Menu</a>
-    <a href="#contact" class="hover:underline">Contact</a>
-  </nav>
 </header>
 
 <!-- Mobile Overlay -->
 <div id="mobileOverlay" class="fixed inset-0 bg-black bg-opacity-60 hidden z-40">
-  <div class="bg-white w-4/5 max-w-xs h-full p-6 space-y-6 absolute right-0 shadow-xl">
-    <button id="closeBtn" class="text-black text-3xl absolute top-4 right-4">&times;</button>
-    <nav class="flex flex-col space-y-4 text-lg mt-12">
+  <div class="bg-white w-4/5 max-w-xs h-full p-6 space-y-6 absolute right-0 top-0 shadow-xl flex flex-col">
+    <div class="flex justify-between items-center mb-6">
+      <h2 class="text-xl font-bold">Menu</h2>
+      <button id="closeBtn" class="text-black text-3xl">&times;</button>
+    </div>
+    <nav class="flex flex-col space-y-4 text-lg">
       <a href="#locations" class="text-gray-800 hover:text-red-500">Locations</a>
       <a href="#photos" class="text-gray-800 hover:text-red-500">Photos</a>
       <a href="#menu" class="text-gray-800 hover:text-red-500">Menu</a>
@@ -47,46 +61,38 @@
     <p class="text-lg md:text-xl text-gray-700">Fresh, Fast, and Flavorful – Find us near you!</p>
   </section>
 
-  <!-- Locations Section -->
-  <section id="locations" class="py-12 bg-white">
-    <div class="container mx-auto px-4">
-      <h3 class="text-3xl font-bold text-center mb-10">Our Locations</h3>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!-- Repeat for each location -->
-        <div class="p-6 border rounded-lg shadow hover:shadow-md transition">
-          <h4 class="text-xl font-semibold mb-2">Location 1</h4>
-          <p>123 Street Name, City</p>
-          <p>Open: 10am - 10pm</p>
-        </div>
-        <!-- Add remaining 5 locations -->
-         <div class="p-6 border rounded-lg shadow hover:shadow-md transition">
-          <h4 class="text-xl font-semibold mb-2">Location 2</h4>
-          <p>456 Main Road, City</p>
-          <p>Open: 9am - 9pm</p>
-        </div>
-        <div class="p-6 border rounded-lg shadow hover:shadow-md transition">
-          <h4 class="text-xl font-semibold mb-2">Location 3</h4>
-          <p>789 Food Plaza, City</p>
-          <p>Open: 11am - 11pm</p>
-        </div>
-        <div class="p-6 border rounded-lg shadow hover:shadow-md transition">
-          <h4 class="text-xl font-semibold mb-2">Location 4</h4>
-          <p>Near Lakeview, City</p>
-          <p>Open: 8am - 10pm</p>
-        </div>
-        <div class="p-6 border rounded-lg shadow hover:shadow-md transition">
-          <h4 class="text-xl font-semibold mb-2">Location 5</h4>
-          <p>321 Hilltop St, City</p>
-          <p>Open: 9am - 10pm</p>
-        </div>
-        <div class="p-6 border rounded-lg shadow hover:shadow-md transition">
-          <h4 class="text-xl font-semibold mb-2">Location 6</h4>
-          <p>999 Downtown Blvd, City</p>
-          <p>Open: 10am - 9pm</p>
-        </div>
-      </div>
+<!-- Locations Section -->
+<section id="locations" class="py-12 bg-white">
+  <div class="container mx-auto px-4">
+    <h3 class="text-3xl font-bold text-center mb-10">Our Locations</h3>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <a href="https://maps.app.goo.gl/x2dXF1yRd5bLRwuQ8" target="_blank" rel="noopener noreferrer" class="p-6 border rounded-lg shadow hover:shadow-md transition block">
+        <h4 class="text-xl font-semibold mb-2">Laxmi Enclave Katargam</h4>
+        <p>Open: 10am - 10pm</p>
+      </a>
+      <a href="https://maps.app.goo.gl/49Y3WsAMxtscPKp69" target="_blank" rel="noopener noreferrer" class="p-6 border rounded-lg shadow hover:shadow-md transition block">
+        <h4 class="text-xl font-semibold mb-2">Dabholi Char Rasta</h4>
+        <p>Open: 9am - 9pm</p>
+      </a>
+      <a href="https://maps.app.goo.gl/sYWMm9JyKWu5LT8B6" target="_blank" rel="noopener noreferrer" class="p-6 border rounded-lg shadow hover:shadow-md transition block">
+        <h4 class="text-xl font-semibold mb-2">Mota Varachha</h4>
+        <p>Open: 11am - 11pm</p>
+      </a>
+      <a href="https://maps.app.goo.gl/dvFJampdQSN2zZxE7" target="_blank" rel="noopener noreferrer" class="p-6 border rounded-lg shadow hover:shadow-md transition block">
+        <h4 class="text-xl font-semibold mb-2">LP</h4>
+        <p>Open: 8am - 10pm</p>
+      </a>
+      <a href="https://maps.app.goo.gl/BT1dBLzcYKWGPxsu7" target="_blank" rel="noopener noreferrer" class="p-6 border rounded-lg shadow hover:shadow-md transition block">
+        <h4 class="text-xl font-semibold mb-2">Jahangirpura</h4>
+        <p>Open: 9am - 10pm</p>
+      </a>
+      <a href="https://maps.app.goo.gl/bP9n8v6y1RvjAyyR8" target="_blank" rel="noopener noreferrer" class="p-6 border rounded-lg shadow hover:shadow-md transition block">
+        <h4 class="text-xl font-semibold mb-2">Nana Varachha</h4>
+        <p>Open: 10am - 9pm</p>
+      </a>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- Photos Section -->
   <section id="photos" class="bg-gray-100 py-12">
@@ -169,24 +175,38 @@
   const mobileOverlay = document.getElementById('mobileOverlay');
   const closeBtn = document.getElementById('closeBtn');
 
-  // Open overlay
-  menuBtn.addEventListener('click', () => {
+  function openMenu() {
     mobileOverlay.classList.remove('hidden');
-    document.body.classList.add('overflow-hidden');
-  });
+    document.body.classList.add('menu-open');
+  }
 
-  // Close overlay
-  closeBtn.addEventListener('click', () => {
+  function closeMenu() {
     mobileOverlay.classList.add('hidden');
-    document.body.classList.remove('overflow-hidden');
+    document.body.classList.remove('menu-open');
+  }
+
+  menuBtn.addEventListener('click', () => {
+    if (mobileOverlay.classList.contains('hidden')) {
+      openMenu();
+    } else {
+      closeMenu();
+    }
   });
 
-  // Optional: close on link click
+  closeBtn.addEventListener('click', closeMenu);
+
+  document.addEventListener('click', (e) => {
+    if (
+      !document.querySelector('#mobileOverlay div').contains(e.target) &&
+      !menuBtn.contains(e.target) &&
+      !mobileOverlay.classList.contains('hidden')
+    ) {
+      closeMenu();
+    }
+  });
+
   document.querySelectorAll('#mobileOverlay nav a').forEach(link => {
-    link.addEventListener('click', () => {
-      mobileOverlay.classList.add('hidden');
-      document.body.classList.remove('overflow-hidden');
-    });
+    link.addEventListener('click', closeMenu);
   });
 </script>
 </body>
