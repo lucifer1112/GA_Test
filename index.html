@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,11 +12,14 @@
 <header class="bg-red-500 text-white shadow-md sticky top-0 z-50">
   <div class="container mx-auto px-4 py-4 flex justify-between items-center">
     <h1 class="text-2xl font-bold">My Food Shop</h1>
+
+    <!-- Hamburger Button -->
     <button id="menuBtn" class="md:hidden text-white text-3xl focus:outline-none z-50 relative">
       ☰
     </button>
   </div>
 
+  <!-- Desktop Nav -->
   <nav class="hidden md:flex justify-center space-x-6 py-2">
     <a href="#locations" class="hover:underline">Locations</a>
     <a href="#photos" class="hover:underline">Photos</a>
@@ -39,56 +41,153 @@
   </div>
 </div>
 
-<!-- Example Main Content -->
-<section class="py-20 text-center bg-gray-100" id="locations">
-  <h2 class="text-3xl font-bold mb-4">Our Locations</h2>
-  <p>Location cards will go here...</p>
-</section>
+  <!-- Hero Section -->
+  <section class="bg-red-100 py-16 text-center">
+    <h2 class="text-4xl md:text-5xl font-bold mb-4">Delicious Bites at 6 Locations</h2>
+    <p class="text-lg md:text-xl text-gray-700">Fresh, Fast, and Flavorful – Find us near you!</p>
+  </section>
 
-<section class="py-20 text-center" id="photos">
-  <h2 class="text-3xl font-bold mb-4">Photo Gallery</h2>
-  <p>Gallery will go here...</p>
-</section>
+  <!-- Locations Section -->
+  <section id="locations" class="py-12 bg-white">
+    <div class="container mx-auto px-4">
+      <h3 class="text-3xl font-bold text-center mb-10">Our Locations</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Repeat for each location -->
+        <div class="p-6 border rounded-lg shadow hover:shadow-md transition">
+          <h4 class="text-xl font-semibold mb-2">Location 1</h4>
+          <p>123 Street Name, City</p>
+          <p>Open: 10am - 10pm</p>
+        </div>
+        <!-- Add remaining 5 locations -->
+         <div class="p-6 border rounded-lg shadow hover:shadow-md transition">
+          <h4 class="text-xl font-semibold mb-2">Location 2</h4>
+          <p>456 Main Road, City</p>
+          <p>Open: 9am - 9pm</p>
+        </div>
+        <div class="p-6 border rounded-lg shadow hover:shadow-md transition">
+          <h4 class="text-xl font-semibold mb-2">Location 3</h4>
+          <p>789 Food Plaza, City</p>
+          <p>Open: 11am - 11pm</p>
+        </div>
+        <div class="p-6 border rounded-lg shadow hover:shadow-md transition">
+          <h4 class="text-xl font-semibold mb-2">Location 4</h4>
+          <p>Near Lakeview, City</p>
+          <p>Open: 8am - 10pm</p>
+        </div>
+        <div class="p-6 border rounded-lg shadow hover:shadow-md transition">
+          <h4 class="text-xl font-semibold mb-2">Location 5</h4>
+          <p>321 Hilltop St, City</p>
+          <p>Open: 9am - 10pm</p>
+        </div>
+        <div class="p-6 border rounded-lg shadow hover:shadow-md transition">
+          <h4 class="text-xl font-semibold mb-2">Location 6</h4>
+          <p>999 Downtown Blvd, City</p>
+          <p>Open: 10am - 9pm</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<section class="py-20 text-center bg-gray-100" id="menu">
-  <h2 class="text-3xl font-bold mb-4">Menu</h2>
-  <p>Menu items will go here...</p>
-</section>
+  <!-- Photos Section -->
+  <section id="photos" class="bg-gray-100 py-12">
+    <div class="container mx-auto px-4">
+      <h3 class="text-3xl font-bold text-center mb-10">Photo Gallery</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+        <!-- Placeholder images; replace with actual URLs -->
+        <img src="https://source.unsplash.com/400x300/?food" alt="Food 1" class="rounded shadow hover:scale-105 transition">
+        <img src="https://source.unsplash.com/400x300/?restaurant" alt="Shop" class="rounded shadow hover:scale-105 transition">
+        <img src="https://source.unsplash.com/400x300/?cuisine" alt="Dish" class="rounded shadow hover:scale-105 transition">
+        <img src="https://source.unsplash.com/400x300/?dining" alt="Ambiance" class="rounded shadow hover:scale-105 transition">
+        <img src="https://source.unsplash.com/400x300/?streetfood" alt="Street Food" class="rounded shadow hover:scale-105 transition">
+        <img src="https://source.unsplash.com/400x300/?menu" alt="Menu" class="rounded shadow hover:scale-105 transition">
+      </div>
+    </div>
+  </section>
 
-<section class="py-20 text-center" id="contact">
-  <h2 class="text-3xl font-bold mb-4">Contact</h2>
-  <p>Contact info will go here...</p>
-</section>
+  <!-- Menu Section -->
+  <section id="menu" class="py-12 bg-white">
+    <div class="container mx-auto px-4">
+      <h3 class="text-3xl font-bold text-center mb-10">Our Menu</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+          <h4 class="text-xl font-semibold mb-2">Snacks</h4>
+          <ul class="space-y-2 text-gray-700">
+            <li>Veg Sandwich – ₹50</li>
+            <li>Cheese Burger – ₹90</li>
+            <li>French Fries – ₹60</li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-xl font-semibold mb-2">Drinks</h4>
+          <ul class="space-y-2 text-gray-700">
+            <li>Fresh Lime Soda – ₹40</li>
+            <li>Cold Coffee – ₹70</li>
+            <li>Mango Shake – ₹80</li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-xl font-semibold mb-2">Meals</h4>
+          <ul class="space-y-2 text-gray-700">
+            <li>Veg Thali – ₹120</li>
+            <li>Paneer Wrap – ₹100</li>
+            <li>Masala Dosa – ₹90</li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-xl font-semibold mb-2">Desserts</h4>
+          <ul class="space-y-2 text-gray-700">
+            <li>Gulab Jamun – ₹40</li>
+            <li>Ice Cream Scoop – ₹30</li>
+            <li>Brownie – ₹60</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<!-- Footer -->
-<footer class="bg-red-500 text-white text-center py-4">
-  <p>&copy; 2025 My Food Shop. All rights reserved.</p>
-</footer>
+  <!-- Contact Section -->
+  <section id="contact" class="bg-gray-100 py-12">
+    <div class="container mx-auto px-4 text-center">
+      <h3 class="text-3xl font-bold mb-4">Contact Us</h3>
+      <p class="mb-2">📧 Email: <a href="mailto:info@myfoodshop.com" class="text-red-500 hover:underline">info@myfoodshop.com</a></p>
+      <p class="mb-2">📞 Phone: +91-9876543210</p>
+      <div class="flex justify-center space-x-6 mt-4">
+        <a href="https://instagram.com/myfoodshop" target="_blank" class="text-gray-600 hover:text-red-500">Instagram</a>
+        <a href="https://facebook.com/myfoodshop" target="_blank" class="text-gray-600 hover:text-red-500">Facebook</a>
+        <a href="https://twitter.com/myfoodshop" target="_blank" class="text-gray-600 hover:text-red-500">Twitter</a>
+      </div>
+    </div>
+  </section>
 
+  <!-- Footer -->
+  <footer class="bg-red-500 text-white text-center py-4">
+    <p>&copy; 2025 My Food Shop. All rights reserved.</p>
+  </footer>
+  <!-- Java Script-->>
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const menuBtn = document.getElementById('menuBtn');
-    const mobileOverlay = document.getElementById('mobileOverlay');
-    const closeBtn = document.getElementById('closeBtn');
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileOverlay = document.getElementById('mobileOverlay');
+  const closeBtn = document.getElementById('closeBtn');
 
-    menuBtn.addEventListener('click', () => {
-      mobileOverlay.classList.remove('hidden');
-      document.body.classList.add('overflow-hidden');
-    });
+  // Open overlay
+  menuBtn.addEventListener('click', () => {
+    mobileOverlay.classList.remove('hidden');
+    document.body.classList.add('overflow-hidden');
+  });
 
-    closeBtn.addEventListener('click', () => {
+  // Close overlay
+  closeBtn.addEventListener('click', () => {
+    mobileOverlay.classList.add('hidden');
+    document.body.classList.remove('overflow-hidden');
+  });
+
+  // Optional: close on link click
+  document.querySelectorAll('#mobileOverlay nav a').forEach(link => {
+    link.addEventListener('click', () => {
       mobileOverlay.classList.add('hidden');
       document.body.classList.remove('overflow-hidden');
     });
-
-    document.querySelectorAll('#mobileOverlay nav a').forEach(link => {
-      link.addEventListener('click', () => {
-        mobileOverlay.classList.add('hidden');
-        document.body.classList.remove('overflow-hidden');
-      });
-    });
   });
 </script>
-
 </body>
 </html>
