@@ -1,0 +1,13 @@
+body.menu-open {
+  overflow: hidden;
+}
+#mobileOverlay {
+  transition: background-color 1.5s ease;
+}
+#mobileDrawer {
+  transition: transform 1.5s ease;
+  transform: translateX(100%);
+}
+#mobileOverlay.active #mobileDrawer {
+  transform: translateX(0);
+}
