@@ -1,3 +1,28 @@
+:root {
+  --primary-red: #D62828;
+  --accent-yellow: #F77F00;
+  --soft-yellow: #FCBF49;
+  --light-bg: #F1FAEE;
+  --dark-text: #1D1D1D;
+}
+
+body {
+  background-color: var(--light-bg) !important;
+  color: var(--dark-text) !important;
+}
+
+header {
+  background-color: var(--primary-red) !important;
+}
+
+a:hover {
+  color: var(--accent-yellow) !important;
+}
+
+footer {
+  background-color: var(--primary-red) !important;
+}
+
 body.menu-open {
   overflow: hidden;
 }
@@ -10,4 +35,11 @@ body.menu-open {
 }
 #mobileOverlay.active #mobileDrawer {
   transform: translateX(0);
+}
+/* --- Scroll offset fix for fixed header --- */
+html {
+  scroll-behavior: smooth;
+}
+:root {
+  scroll-padding-top: 6rem; /* Adjust based on your header height */
 }
