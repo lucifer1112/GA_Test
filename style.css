@@ -1,0 +1,389 @@
+/* Modern CSS Reset and Variables */
+:root {
+    --primary-color: #f28221; /* Orange from the logo */
+    --secondary-color: #3b2014; /* Dark wood color */
+    --bg-light: #f9f9f9;
+    --text-dark: #333;
+    --text-light: #fff;
+    --whatsapp-green: #25D366;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* --- Header & Navigation --- */
+header {
+    background-color: var(--secondary-color);
+    padding: 15px 5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+.logo-container img {
+    height: 70px;
+    border-radius: 8px;
+    object-fit: contain;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+nav a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--primary-color);
+}
+
+/* --- Hero Section --- */
+.hero {
+    background: linear-gradient(rgba(59, 32, 20, 0.85), rgba(59, 32, 20, 0.85)), url('all.jpeg') center/cover no-repeat;
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--text-light);
+    padding: 20px;
+}
+
+.since-badge {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 15px;
+    color: var(--text-light);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero p {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    max-width: 700px;
+}
+
+.btn {
+    padding: 15px 35px;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn:hover {
+    background-color: #d96e1a;
+    transform: translateY(-3px);
+}
+
+/* Section Titles */
+.section-title {
+    text-align: center;
+    margin: 4rem 0 2.5rem;
+    font-size: 2.8rem;
+    color: var(--secondary-color);
+}
+
+.section-title span {
+    color: var(--primary-color);
+}
+
+/* --- Signature Items Container --- */
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 0 5%;
+    margin-bottom: 3rem;
+}
+
+.menu-item {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+    flex: 1 1 300px;
+    max-width: 380px;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+}
+
+.menu-item img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+}
+
+.menu-info {
+    padding: 25px;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.menu-info h3 {
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+/* --- Full Menu List Style --- */
+.full-menu-section {
+    background-color: #fff;
+    padding: 2rem 5% 4rem;
+}
+
+.full-menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.menu-list-card {
+    border: 1px solid #eee;
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+    transition: transform 0.2s, box-shadow 0.2s;
+    background-color: var(--bg-light);
+}
+
+.menu-list-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.08);
+    border-color: var(--primary-color);
+}
+
+.menu-list-card h4 {
+    font-size: 1.15rem;
+    color: var(--secondary-color);
+    margin-bottom: 0;
+}
+
+.menu-list-card p {
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 1.25rem;
+    margin: 0;
+}
+
+/* --- Locations Section --- */
+.locations {
+    background-color: var(--secondary-color);
+    color: var(--text-light);
+    padding: 4rem 0;
+}
+
+.locations .section-title {
+    color: var(--text-light);
+    margin-top: 0;
+}
+
+.location-card {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 25px;
+    border-radius: 10px;
+    border-left: 6px solid var(--primary-color);
+    flex: 1 1 280px;
+    max-width: 400px;
+    transition: background 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.location-card:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.location-card h4 {
+    color: var(--primary-color);
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+}
+
+.location-card p {
+    margin-bottom: 8px;
+    font-size: 1.05rem;
+    flex-grow: 1;
+}
+
+.directions-link {
+    display: inline-block;
+    margin-top: 15px;
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: bold;
+    background-color: rgba(242, 130, 33, 0.2);
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 1px solid var(--primary-color);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.directions-link:hover {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+}
+
+/* --- Contact Section --- */
+.contact {
+    padding: 4rem 5%;
+    text-align: center;
+}
+
+.contact p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.contact-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.whatsapp-btn {
+    background-color: var(--whatsapp-green);
+}
+.whatsapp-btn:hover {
+    background-color: #1ebe57;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: #1a0f0a;
+    color: #ccc;
+    text-align: center;
+    padding: 2.5rem 20px;
+}
+
+footer h2 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+/* --- Hamburger Icon --- */
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    color: var(--text-light);
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.menu-toggle:active {
+    transform: scale(0.9);
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 768px) {
+    header {
+        /* Keep header items on the same line */
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 20px;
+    }
+
+    /* Show the hamburger icon on mobile */
+    .menu-toggle {
+        display: block;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    /* Hide the normal menu and style it as a dropdown */
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: var(--secondary-color);
+        text-align: center;
+        position: absolute;
+        top: 100px; /* Pushes it below the header */
+        left: 0;
+        padding: 20px 0;
+        box-shadow: 0 10px 10px rgba(0,0,0,0.2);
+    }
+
+    /* Class added by Javascript to show the menu */
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 15px 0;
+    }
+
+    nav a {
+        font-size: 1.3rem; /* Make text a bit larger for easy tapping */
+    }
+
+    .hero h1 { font-size: 2.8rem; }
+    .section-title { font-size: 2.2rem; }
+    .contact-buttons { flex-direction: column; align-items: center; }
+    .contact-buttons .btn { width: 100%; max-width: 300px; justify-content: center; }
+}
