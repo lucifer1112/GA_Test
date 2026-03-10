@@ -14,13 +14,18 @@
             <img src="Logo.jpeg" alt="Shree Ganesh Logo">
         </div>
         
-        <div class="menu-toggle" id="mobile-menu">
-            <i class="fas fa-bars"></i>
+        <div class="nav-right">
+            <button id="theme-toggle" aria-label="Toggle Dark Mode"><i class="fas fa-moon"></i></button>
+            
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
         </div>
 
         <nav>
             <ul id="nav-list">
                 <li><a href="#home">Home</a></li>
+                <li><a href="#story">Our Story</a></li>
                 <li><a href="#menu">Menu</a></li>
                 <li><a href="#locations">Locations</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -32,7 +37,19 @@
         <div class="since-badge">Since 2007</div>
         <h1>Authentic Surati Taste</h1>
         <p>Famous Aloopuri & Rasawala Khaman by Harishbhai Jahangirpura Wala. Pure Veg, 100% Delicious.</p>
-        <a href="#menu" class="btn">Explore Menu</a>
+        <div class="hero-buttons">
+            <a href="#menu" class="btn">Explore Menu</a>
+            <a href="http://zoma.to/r/21519064" class="btn btn-zomato"><i class="fas fa-utensils"></i> Order Zomato</a>
+            <a href="https://www.swiggy.com/menu/974307?source=sharing" class="btn btn-swiggy"><i class="fas fa-motorcycle"></i> Order Swiggy</a>
+        </div>
+    </section>
+
+    <section id="story">
+        <h2 class="section-title">Our <span>Story</span></h2>
+        <div class="story-container">
+            <p>What started as a humble beginning in 2007 by <strong>Harishbhai (Jahangirpura Wala)</strong> has now grown into Surat's favorite destination for authentic Aloopuri and Rasawala Khaman.</p>
+            <p>For almost two decades, we have strictly adhered to our original recipes, using 100% Pure Veg ingredients and home-ground spices to bring that signature sweet, spicy, and tangy burst of flavor to your plate. Today, with 6 locations across Surat, our mission remains the same: to serve fresh, hot, and hygienic Surti street food to our community.</p>
+        </div>
     </section>
 
     <section id="menu">
@@ -71,68 +88,97 @@
 
     <section class="full-menu-section">
         <h2 class="section-title" style="margin-top: 0;">Full <span>Menu</span></h2>
-        <div class="full-menu-grid">
-            <div class="menu-list-card">
+        
+        <div class="menu-filters">
+            <button class="filter-btn active" data-filter="all">All Items</button>
+            <button class="filter-btn" data-filter="aloopuri">Aloopuri</button>
+            <button class="filter-btn" data-filter="khavsa">Khavsa & Khaman</button>
+            <button class="filter-btn" data-filter="extras">Extras</button>
+        </div>
+
+        <div class="full-menu-grid" id="menu-grid">
+            <div class="menu-list-card" data-category="aloopuri">
                 <h4>Aloopuri (5 piece)</h4>
                 <p>₹20</p>
             </div>
-            <div class="menu-list-card">
+            <div class="menu-list-card" data-category="aloopuri">
                 <h4>Aloopuri (8 piece)</h4>
                 <p>₹30</p>
             </div>
-            <div class="menu-list-card">
+            <div class="menu-list-card" data-category="aloopuri">
                 <h4>Cheese Aloopuri (5 piece)</h4>
                 <p>₹50</p>
             </div>
-            <div class="menu-list-card">
+            <div class="menu-list-card" data-category="aloopuri">
                 <h4>Cheese Aloopuri (8 piece)</h4>
                 <p>₹70</p>
             </div>
-            <div class="menu-list-card">
+            <div class="menu-list-card" data-category="aloopuri">
                 <h4>Cutless Aloopuri (5 piece)</h4>
                 <p>₹30</p>
             </div>
-            <div class="menu-list-card">
+            <div class="menu-list-card" data-category="aloopuri">
                 <h4>Cutless Aloopuri (8 piece)</h4>
                 <p>₹50</p>
             </div>
-            <div class="menu-list-card">
+            <div class="menu-list-card" data-category="aloopuri">
                 <h4>Mayonnaise Aloopuri (5 piece)</h4>
                 <p>₹30</p>
             </div>
-            <div class="menu-list-card">
+            <div class="menu-list-card" data-category="aloopuri">
                 <h4>Mayonnaise Aloopuri (8 piece)</h4>
                 <p>₹50</p>
             </div>
-            <div class="menu-list-card">
+            <div class="menu-list-card" data-category="khavsa">
                 <h4>Rasawala Khaman</h4>
                 <p>₹35</p>
             </div>
-            <div class="menu-list-card">
+            <div class="menu-list-card" data-category="khavsa">
                 <h4>Veg. Khavsa</h4>
                 <p>₹50</p>
             </div>
-            <div class="menu-list-card">
+            <div class="menu-list-card" data-category="khavsa">
                 <h4>Cheese Khavsa</h4>
                 <p>₹70</p>
             </div>
-            <div class="menu-list-card">
+            <div class="menu-list-card" data-category="extras">
                 <h4>Cutless (2 piece)</h4>
                 <p>₹10</p>
             </div>
-            <div class="menu-list-card">
+            <div class="menu-list-card" data-category="extras">
                 <h4>Extra Sev</h4>
                 <p>₹10</p>
             </div>
-            <div class="menu-list-card">
+            <div class="menu-list-card" data-category="extras">
                 <h4>Parcel Charge (Khavsa, Khaman)</h4>
                 <p>₹05</p>
             </div>
         </div>
     </section>
 
+    <section id="reviews">
+        <h2 class="section-title">Customer <span>Reviews</span></h2>
+        <div class="reviews-container">
+            <div class="review-card">
+                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <p>"The absolute best Aloopuri in Surat! The chutney combination is perfect, and it's always served fresh and hot."</p>
+                <h4>- Rahul D.</h4>
+            </div>
+            <div class="review-card">
+                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                <p>"Their Rasawala Khaman is a must-try. I've been coming to the Jahangirpura branch since my college days."</p>
+                <h4>- Priya M.</h4>
+            </div>
+            <div class="review-card">
+                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <p>"Very hygienic and fast service even when crowded. The Cheese Khavsa is amazing!"</p>
+                <h4>- Amit P.</h4>
+            </div>
+        </div>
+    </section>
+
     <section class="locations" id="locations">
-        <h2 class="section-title">Find Us At <span>6 Locations</span></h2>
+        <h2 class="section-title" style="color:#fff;">Find Us At <span>6 Locations</span></h2>
         <div class="flex-container">
             <div class="location-card">
                 <h4>Jahangirpura (Main)</h4>
@@ -175,21 +221,32 @@
 
     <section class="contact" id="contact">
         <h2 class="section-title">Get In <span>Touch</span></h2>
-        <p>Have a question or want to place a bulk order for an event? Reach out to us!</p>
+        <p>Have a question or want to place a bulk order for an event? Reach out to us and follow our journey!</p>
         
         <div class="contact-buttons">
-            <a href="tel:+919664949012" class="btn"><i class="fas fa-phone-alt"></i> Call Us: +91 96649 49012</a>
-            <a href="https://wa.me/919664949012" target="_blank" class="btn whatsapp-btn"><i class="fab fa-whatsapp"></i> WhatsApp Us</a>
+            <a href="tel:+919664949012" class="btn"><i class="fas fa-phone-alt"></i> Call Us</a>
+            <a href="https://wa.me/919664949012" target="_blank" class="btn whatsapp-btn"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            
+            <a href="https://www.instagram.com/shree_ganesh_aloopuri_surat" target="_blank" class="btn btn-instagram"><i class="fab fa-instagram"></i> Instagram</a>
+            <a href="#" target="_blank" class="btn btn-facebook"><i class="fab fa-facebook-f"></i> Facebook</a>
         </div>
     </section>
 
     <footer>
         <h2>શ્રી ગણેશ આલુપુરી & રસાવાળા ખમણ</h2>
+        <div class="social-links">
+            <a href="https://www.instagram.com/shree_ganesh_aloopuri_surat" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://wa.me/919664949012" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
         <p>© 2026 Shree Ganesh Fast Food. All Rights Reserved.</p>
         <p>100% Pure Veg</p>
     </footer>
 
+    <a href="https://wa.me/919664949012" class="floating-whatsapp" target="_blank" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
     <script src="script.js"></script>
 </body>
-
 </html>
